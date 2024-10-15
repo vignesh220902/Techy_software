@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u@uf0m7l1^*g4nt+43qlwom(33qye+zea6d@0h%@kz&r)8qddw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['techy_app.onrender.com']
+ALLOWED_HOSTS = ["*"]
 
 
 
