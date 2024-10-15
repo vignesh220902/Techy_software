@@ -1,0 +1,430 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Techy Software, our mission, vision, and team.">
+    <meta name="keywords" content="Techy Software, software development, technology solutions, about us, mission, vision, team">
+    <meta name="author" content="Techy Software Company">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.Techysoftware.com/about">
+
+    <!--Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--scroll on animation js link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+    <!--google font link-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        background: linear-gradient(135deg, #6a5acd, #00bfff); /* Blue to Purple gradient */
+        color: white; /* Make text color white for better contrast */
+      }      
+      
+      h1, h2 {
+        margin-bottom: 20px;
+      }
+      
+      #about {
+        padding: 20px;
+        border-radius: 8px;
+      }
+      
+      #home{
+        background: url('{% static "images/bg7.jpg" %}') no-repeat center center;
+        background-size: cover; 
+        width:100%;
+        backdrop-filter: blur(10px);
+        height: 580px;
+        margin-top: 60px;
+      }
+
+      .bannertext {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 580px;
+        width: 100%;
+        background-color: rgba(20, 20, 20, 0.33);
+        background: #10101078;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.6px);
+        -webkit-backdrop-filter: blur(0.6px);
+        border: 1px solid rgba(234, 234, 234, 0.61);
+      }
+      .h1 {
+        font-size: 40px;
+        font-weight: 900;
+        text-shadow: 3px 4px 3px rgba(0,0,0,0.53);
+        -webkit-text-stroke: 2pt black;
+      }
+      
+      #our-team{
+        background: rgba( 239, 243, 245, 0.4 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 2.5px );
+        -webkit-backdrop-filter: blur( 2.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+
+      .ourwork {
+        margin-top: 20px;
+        background-color: whitesmoke;
+      }
+
+      #wcu {
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      /* our team style */
+      .card-img-top{
+        width: 400px;
+        height: 250px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      /* footer section style*/
+      .social-media img {
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%; 
+        margin: 0 5px; 
+      }
+
+      .social-media img:hover {
+        border-color: #66afe9;
+        box-shadow: -1px -2px 24px 3px rgba(0,255,255,1);
+        transition: 2s;
+      }
+
+      .navbar {
+        transition: background-color 0.5s; 
+      }
+
+      .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.5); 
+      }
+
+      .card { 
+        transition: transform 0.3s, box-shadow 0.3s; 
+      }
+
+      .card:hover {
+        transform: scale(1.05); 
+        transition: 1s;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+      }
+
+      .btn-primary {
+        transition: background-color 0.3s; 
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3; 
+      }
+    </style>
+</head>
+<body>
+    <header class=" justify-content-center align-items-center">
+        <div class="container-fluid head" >
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container">
+                    <!-- logo -->
+                  <a class="navbar-brand fs-4" href="#">Techy Softwares</a>
+
+                  <!-- toggle button -->
+                  <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <!--side bar-->
+                  <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Techy Softwares</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" href="{% url 'about' %}">About us</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" href="{% url 'service' %}">Product/Service</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link px-3 py-1  rounded-4" style="background-color: #1871ff; color:white;" href="#social">Our Social Media Presence</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <section id="home" class="  banner_wrapper text-light ">
+          <div class="bannertext container-fluid">
+            <div>
+              <p class="h1">we create pathways to success, ensuring that every dream is within reach and achievable.</p>
+              <br>
+              <p class="h5">we are dedicated to turning dreams into reality through collaboration, creativity, and resilience</p>
+              <br>
+              <a href="{% url 'service' %}" class="btn btn-primary " >Our Services </a>
+          </div>            
+          </div>
+        </section>
+    </header>
+    <!--about us contents in main section-->
+    <main class="container-fluid mt-3" >
+        <div class="container-fluid" id="about">
+            <div class="about_us bg-white p-5 rounded">
+              <p class="h2 text-dark">ABOUT US</p><br>
+              <div class="abt_detail row">
+                <img src="{% static 'images/business.jpg' %}" alt="background banner img" class="img-fluid rounded col-sm-6" style="max-width: 600px;">
+                <div class="col-sm-6">
+                  <p class="text-dark  h5">Who We Are ?</p>
+                  <div class="p-2 text-dark">At Techy Software, we are a dynamic team of technology enthusiasts committed to transforming businesses through innovative software solutions. Founded with the belief that technology can unlock immense potential, we leverage our expertise to deliver high-quality products tailored to our clients' unique challenges.</div>
+                  <div class="p-2 text-dark"> Our journey began with a shared passion for technology and a desire to make a positive impact in the digital landscape. Since our inception, we have grown into a diverse group of professionals, each bringing a wealth of knowledge and experience from various industries. This diversity fuels our creativity and allows us to approach problems from multiple perspectives, ensuring that we find the best solutions for our clients.</div>
+                </div>
+              </div> 
+              <div class="container-fluid m-2">
+                <div class="container row">
+                  <div class="col-sm-6 mb-3 mb-sm-0" data-aos="fade-right">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">OUR MISSION</h5>
+                        <p class="card-text">Our mission is simple: to empower businesses with technology.  We strive to create software solutions that not only solve problems but also drive growth and enhance efficiency. By leveraging the latest technologies, we aim to help our clients navigate the ever-evolving digital landscape.</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" data-aos="fade-left">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">OUR VISION</h5>
+                        <p class="card-text">Our vision drives our decisions and inspires our actions every day.Contributing to long-term success while promoting responsible technology use. As we move forward, we remain dedica
+                          ted to realizing this vision, empowering our clients and the communities we serve through technology that matters.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>            
+            </div>
+        </div> 
+
+        <!--Why choose us content-->
+        <div class="container-fluid " id="wcu">
+            <div class="about_us bg-white p-5 rounded">
+                <h2 class="text-center text-dark">Why Choose Us?</h2>
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-left">
+                        <div class="card mt-2 mb-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Expert Team</h5>
+                                <p class="card-text">Our team consists of experienced professionals with a proven track record in software development. Each member brings unique skills and insights, collaborating effectively to solve complex problems. ensuring the highest quality results for our clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card mt-2 mb-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Innovative Solutions</h5>
+                                <p class="card-text">We provide innovative and customized solutions tailored to meet your specific needs. Our team stays ahead of industry trends, utilizing the latest technologies to deliver cutting-edge products. We focus on scalability and efficiency, ensuring that our solutions grow with your business.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-right">
+                        <div class="card mt-2 mb-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Customer Support</h5>
+                                <p class="card-text">Our dedicated support team is available 24/7 to assist you with any queries or issues. We prioritize prompt responses and solutions, ensuring your experience is smooth and seamless. Whether it's troubleshooting or updates, we're here to help every step of the way.</p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="container text-dark mt-5 list-unstyled text-left font-weight-bold">
+                  <li><b>Expert Team:</b> Our skilled professionals bring extensive industry experience</li>
+                  <li><b>Tailored Solutions:</b> We customize software to meet your unique needs.</li>
+                  <li><b>Agile Approach:</b> Our flexible methodology ensures rapid response to changes.</li>
+                  <li><b>Innovative Technology:</b> We implement cutting-edge solutions to drive your success.</li>
+                  <li><b>Reliable Support:</b> Ongoing maintenance and assistance for long-term success.</li>
+                  <li><b>Clear Communication:</b> We maintain transparency throughout the entire project lifecycle.</li>
+                  <li><b>Proven Results:</b> A history of successful projects and satisfied clients.</li>
+                  <li><b>Strong Security:</b> We prioritize robust data protection in every project.</li>
+                  <li><b>Competitive Pricing:</b> Offering high-quality solutions at great value for investment.</li>
+                </ul>
+            </div>
+        </div> 
+        
+        <!--our team-->
+        <section id="our-team" class="mb-5 pb-4">
+            <h2 class="text-center text-dark mt-4">Meet Our Team</h2>
+            <div class="row">
+              <div class="col-sm-4 mt-3" data-aos="fade-left" >
+                <div class="card h-100 p-3">
+                  <img src="{% static 'images/team2.webp' %}" class="img-fluid rounded-circle m-2" alt="our tem member"> 
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Aisha</h5>
+                    <p class="card-text">UI & UX Designer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 mt-3" data-aos="fade-up" >
+                <div class="card h-100 p-3">
+                  <img src="{% static 'images/me2.jpg' %}" class="img-fluid rounded-circle m-2" alt="our team member"> 
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Vignesh</h5>
+                    <p class="card-text">CEO & Founder</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 mt-3" data-aos="fade-right">
+                <div class="card h-100 p-3">
+                  <img src="{% static 'images/tem3.jpg' %}" class="img-fluid rounded-circle m-2" alt="our team member"> 
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Samantha</h5>
+                    <p class="card-text">Lead Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!--our company clients-->
+        <section class="clients" >
+          <div class="container-fluid text-center bg-light text-dark rounded p-5" >
+            <h1>Our Valued Clients</h1>
+            <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner client-carousel">
+                    <div class="carousel-item active">
+                        <img src="{% static 'images/client-1.png' %}" class="d-block mx-auto card-img-top" alt="our clients logos">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{% static 'images/client-2.png' %}" class="d-block mx-auto card-img-top" alt="our clients logos">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{% static 'images/client-3.webp' %}" class="d-block mx-auto card-img-top" alt="our clients logos">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{% static 'images/client-4.jpg' %}" class="d-block mx-auto card-img-top" alt="our clients logos">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark p-2 rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden ">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark p-2 rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!--footer Section-->
+    <footer class="bg-dark text-white mt-1" data-aos="fade-up">
+      <div class="container py-4">
+          <div class="row " >
+              <div class="col-md-6 mt-4">
+                  <h5>Contact Us</h5>
+                  <p class="m-4">
+                      <strong>Techy Software Company</strong><br>
+                      Office No. 101,<br>
+                      Tech Park, 5th Floor,<br>
+                      123 Tech Lane,<br>
+                      Near MG Road,<br>
+                      Bangalore, Karnataka 560001,<br>
+                      India<br>
+                      <div class="m-3">
+                      <strong>Email:</strong> <a href="mailto:vigneshvignesh0822@gmail.com" class="text-decoration-none text-white">vigneshvignesh0822@gmail.com</a><br>
+                      <strong>Phone:</strong> <a href="tel:+919344060698" class="text-white text-decoration-none">+91 9344060698</a>
+                    </div>
+                  </p>
+              </div>
+  
+              <!-- social medias to follow our company-->
+              <div class="col-md-6 social-media" id="social">
+              <div style="margin-top: 30px;">
+                <h5>Follow Us</h5>
+                <a href="https://www.youtube.com" target="_blank">
+                  <img src="{% static 'images/yout.jpg' %}" alt="You tube"   >
+                </a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                  <img src="{% static 'images/fb1.png' %}" alt="Facebook"   >
+                </a>
+                <a href="https://www.twitter.com/yourprofile" target="_blank">
+                  <img src="{% static 'images/tw.png' %}" alt="twitter"   >
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                  <img src="{% static 'images/linked.png' %}" alt="Linkedin" >
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                  <img src="{% static 'images/insta1.jpg' %}" alt="Instagram"   >
+                </a>
+              </div><br>
+              <hr>
+  
+  
+              <!-- navbar sectio at footer-->
+  
+              
+                <div class="d-flex">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item mx-2">
+                      <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="{% url 'about' %}">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="{% url 'service' %}">Product/Service</a>  
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+              
+          </div>
+          <hr class="bg-light">
+          <div class="text-center">
+              <p class="mb-0">&copy; 2024 Techy Software Company. All rights reserved.</p>
+          </div>
+      </div>
+    </footer>
+
+    <!--Script links-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000,
+        }
+      );
+    </script>
+</body>
+</html>

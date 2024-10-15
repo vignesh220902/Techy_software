@@ -1,0 +1,220 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Get in touch with Techy Software Company for inquiries and support.">
+    <meta name="keywords" content="Techy Software, Contact, Inquiry, Support">
+    <meta name="author" content="Techy Software Company">
+
+    <!--bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--scroll on animation js link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+    <!--google font link-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #6a5acd, #8a2be2);
+            color: white;
+            height: 100vh;  
+            text-align: center;
+            align-items: center;
+            justify-content: center; 
+            margin: 0;
+        }
+        main{
+            padding:50px ;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color:#8a2be2;  
+            transform: scale(1.05);
+        }
+
+       
+        input:focus, textarea:focus {
+            border-color: #8a2be2;
+            box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);  
+        }
+
+        .social-media img {
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            margin: 0 5px; 
+          }
+    
+          .social-media img:hover {
+            border-color: #66afe9;
+            box-shadow: -1px -2px 24px 3px rgba(0,255,255,1);
+            transition: 2s;
+          }
+
+    </style>
+</head>
+<body>
+    <header class=" justify-content-center align-items-center">
+        <div class="container-fluid head" >
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container">
+                    <!-- logo -->
+                  <a class="navbar-brand fs-4" href="#">Techy Softwares</a>
+
+                  <!-- toggle button -->
+                  <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <!--side bar-->
+                  <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Techy Softwares</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                          <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" href="{% url 'about' %}">About us</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" href="{% url 'service' %}">Product/Service</a>
+
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                          <a class="nav-link px-3 py-1  rounded-4" style="background-color: #1871ff; color:white;" href="#social">Our Social Media Presence</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    
+    <!--main section contains a forms input-->
+   <main>
+    <div class="container pt-5 mt-5" style="background: rgba(0, 0, 0, 0.7);  padding: 30px;  border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); width: 100%; max-width: 400px;  ">
+        <h1 class="text-center">Contact Us</h1>
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+    <div class="container-fluid mt-5 bg-light text-dark rounded pt-3">
+      <p >Fill out the form below to share your details, and we'll get back to you shortly!</p>
+      <p  class="h4 fw-b" >You have Business.we have Strategy.<br> Grow your Business With US <br> <a href="{% url 'potential_customer' %}" class="btn btn-success m-2">Interested in Our Services? Let Us Know!</a></p>
+      <br>
+    </div>
+   </main>
+
+   <!--footer section-->
+   <footer class="bg-dark text-white mt-1" data-aos="fade-up">
+    <div class="container py-4">
+        <div class="row " >
+            <div class="col-md-6 mt-4">
+                <h5>Contact Us</h5>
+                <p class="m-4">
+                    <strong>Techy Software Company</strong><br>
+                    Office No. 101,<br>
+                    Tech Park, 5th Floor,<br>
+                    123 Tech Lane,<br>
+                    Near MG Road,<br>
+                    Bangalore, Karnataka 560001,<br>
+                    India<br>
+                    <div class="m-3">
+                    <strong>Email:</strong> <a href="mailto:vigneshvignesh0822@gmail.com" class="text-white text-decoration-none">vigneshvignesh0822@gmail.com</a><br>
+                    <strong>Phone:</strong> <a href="tel:+919344060698" class="text-white text-decoration-none">+91 9344060698</a>
+                  </div>
+                </p>
+            </div>
+
+            <!-- social medias to follow our company-->
+            <div class="col-md-6 social-media" id="social">
+            <div style="margin-top: 30px;">
+              <h5>Follow Us</h5>
+              <a href="https://www.youtube.com" target="_blank">
+                <img src="{% static 'images/yout.jpg' %}" alt="You tube"   >
+              </a>
+              <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="{% static 'images/fb1.png' %}" alt="Facebook"   >
+              </a>
+              <a href="https://www.twitter.com/yourprofile" target="_blank">
+                <img src="{% static 'images/tw.png' %}" alt="twitter"   >
+              </a>
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <img src="{% static 'images/linked.png' %}" alt="Linkedin" >
+              </a>
+              <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="{% static 'images/insta1.jpg' %}" alt="Instagram"   >
+              </a>
+            </div><br>
+            <hr>
+
+
+            <!-- navbar sectio at footer-->
+
+            
+              <div class="d-flex">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="{% url 'about' %}">About us</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="{% url 'service' %}">Product/Service</a>
+
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+
+              </div>
+              
+            </div>
+            
+        </div>
+        <hr class="bg-light">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2024 Techy Software Company. All rights reserved.</p>
+        </div>
+    </div>
+  </footer> 
+
+  <!--script link-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000,
+        }
+      );
+    </script>
+
+</body>
+</html>
