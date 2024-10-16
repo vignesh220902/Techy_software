@@ -32,7 +32,7 @@ Welcome to the Techy Software Company project! This is a Django-based web applic
 Follow these steps to set up the project locally:
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/techy-software.git
+   git clone https://github.com/vignesh220902/Techy_software.git
    cd techy-software
    
 2.Create a virtual environment:
